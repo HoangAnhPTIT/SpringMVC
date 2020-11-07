@@ -1,3 +1,4 @@
+<%@ page import = "com.hoanganh.util.SecurityUtils" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -47,10 +48,8 @@
 		</a>
 			<div class="dropdown-menu dropdown-menu-right"
 				aria-labelledby="messagesDropdown">
-				<a class="dropdown-item" href="#">Action</a> <a
-					class="dropdown-item" href="#">Another action</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#">Something else here</a>
+				<a class="dropdown-item" href="#">Wellcome <%SecurityUtils.getPrincipal().getFullName(); %></a> 
+				
 			</div></li>
 		<li class="nav-item dropdown no-arrow"><a
 			class="nav-link dropdown-toggle" href="#" id="userDropdown"
@@ -62,7 +61,7 @@
 				<a class="dropdown-item" href="#">Settings</a> <a
 					class="dropdown-item" href="#">Activity Log</a>
 				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#" data-toggle="modal"
+				<a class="dropdown-item" href="<c:url value='/thoat'/>" data-toggle="modal"
 					data-target="#logoutModal">Logout</a>
 			</div></li>
 	</ul>
